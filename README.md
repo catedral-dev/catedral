@@ -174,5 +174,5 @@ No credit card required. No surprise bills. No "contact sales" for pricing.
 </p>
 
 <p align="center">
-  <sub>Proprietary. See LICENSE for details.</sub>
+  <sub>Elastic License 2.0. See LICENSE for details.</sub>
 </p>
