@@ -17,6 +17,60 @@
 
 ---
 
+## The Problem
+
+Cloud infrastructure became an unnecessary tax. Vercel charges $0.15/GB bandwidth. Bare metal costs $0.001/GB. That's **150x difference**.
+
+Most developers pay Vercel/Railway/Render out of inertia, not technical necessity.
+
+**Catedral is the exit.**
+
+---
+
+## Why Developers Choose Catedral
+
+### 💰 Stop Paying the Cloud Tax
+- One server, one price. No surprise bills, no bandwidth metering, no "contact sales"
+- A $4/mo Hetzner server + $19/mo Catedral Pro replaces $150+/mo of PaaS fees
+- Know exactly what you pay. Forever.
+
+### ⚡ One Command, Not Twenty
+- No YAML. No Docker Compose. No Kubernetes. No Terraform + Ansible + Nginx + Certbot
+- `curl | sh` and you have infrastructure. A junior dev can deploy without being DevOps
+- Deploy any app in under 60 seconds
+
+### 🔒 Real Isolation, Not Theater
+- Each app runs in its own VM with its own kernel
+- One compromised app can't touch the others
+- Not namespaces pretending to be secure—real boundaries
+
+### 🔄 Break Things Fearlessly
+- Atomic deployments: either fully applied or fully reverted
+- Instant rollback to any previous state
+- No partial updates leaving you in broken states
+
+### 🌍 Works Everywhere
+- Runs on your hardware—Hetzner, OVH, your closet server
+- No vendor lock-in. Your config is portable. Your data is yours
+- Works offline. Your infrastructure doesn't stop because someone else's cloud went down
+
+### 🛡️ Security Without a PhD
+- Secrets encrypted at rest. No plaintext configs
+- Vulnerability scanning before deploy
+- Real-time monitoring of what's actually running
+
+---
+
+## Who It's For
+
+- **Indie hackers** paying $60-150/mo for things that run fine on a $4 VPS
+- **LATAM & SEA developers** where $20/mo Vercel Pro is a luxury
+- **DevOps freelancers** managing 5-10 client servers with scripts and prayers
+- **Developers burned** by Netlify's $55 overage charges or AWS weekend surprises
+- **NixOS enthusiasts** tired of hostile tooling
+
+---
+
 ## Installation
 
 ```bash
@@ -28,30 +82,40 @@ catedral init
 ## Quick Start
 
 ```bash
-catedral app install komodo    # Deploy Komodo
-catedral app install plausible # Deploy Plausible Analytics
-catedral app list              # See running apps
+catedral app install komodo      # Deploy in seconds
+catedral app install plausible   # Add another
+catedral app list                # See what's running
 ```
 
-## Why Catedral?
+---
 
-- **One command**: No YAML, no Docker, no Kubernetes
-- **Real isolation**: Each app runs in its own VM
-- **NixOS**: Atomic updates, instant rollback
-- **Security**: Built-in monitoring and scanning
-
-## Plans
+## Pricing
 
 | Plan | Apps | Price |
 |------|------|-------|
-| Free | 3 | $0 |
-| Pro | Unlimited | $19/mo |
-| Enterprise | Source code | Custom |
+| **Free** | 3 | $0 |
+| **Pro** | Unlimited | $19/mo |
+| **Enterprise** | Source code | Custom |
 
-## Documentation
+No credit card required. No surprise bills. No "contact sales" for pricing.
 
-https://catedral.dev
+---
 
-## License
+## The Anti-PaaS
 
-Proprietary. See LICENSE for details.
+Catedral is the tool we wished existed.
+
+You shouldn't need a PhD in DevOps to deploy a web app securely. You shouldn't pay 150x markup for bandwidth. You shouldn't wake up to a $2000 AWS bill.
+
+**Your server. Your rules. Your cathedral.**
+
+---
+
+<p align="center">
+  <a href="https://catedral.dev">Documentation</a> •
+  <a href="https://github.com/catedral-dev/catedral/releases">Releases</a>
+</p>
+
+<p align="center">
+  <sub>Proprietary. See LICENSE for details.</sub>
+</p>
