@@ -1,6 +1,21 @@
-# Catedral
+<p align="center">
+  <img src="assets/logo.svg" alt="Catedral" width="400">
+</p>
 
-Deploy self-hosted apps in isolated microVMs. One command. NixOS underneath.
+<p align="center">
+  <strong>Deploy self-hosted apps in isolated microVMs. One command. NixOS underneath.</strong>
+</p>
+
+<p align="center">
+  <a href="https://github.com/catedral-dev/catedral/releases/latest">
+    <img src="https://img.shields.io/github/v/release/catedral-dev/catedral?style=flat-square" alt="Release">
+  </a>
+  <a href="https://catedral.dev">
+    <img src="https://img.shields.io/badge/docs-catedral.dev-blue?style=flat-square" alt="Docs">
+  </a>
+</p>
+
+---
 
 ## Installation
 
