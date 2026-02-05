@@ -31,18 +31,26 @@ Most developers pay Vercel/Railway/Render out of inertia, not technical necessit
 
 ### 💰 Stop Paying the Cloud Tax
 - One server, one price. No surprise bills, no bandwidth metering, no "contact sales"
-- A $4/mo Hetzner server + $19/mo Catedral Pro replaces $150+/mo of PaaS fees
+- A $7/mo Hetzner VPS + $19/mo Catedral Pro replaces $150+/mo of PaaS fees
 - Know exactly what you pay. Forever.
 
 ### ⚡ One Command, Not Twenty
 - No YAML. No Docker Compose. No Kubernetes. No Terraform + Ansible + Nginx + Certbot
-- `curl | sh` and you have infrastructure. A junior dev can deploy without being DevOps
+- `curl | sh` and you have infrastructure
 - Deploy any app in under 60 seconds
 
 ### 🔒 Real Isolation, Not Theater
-- Each app runs in its own VM with its own kernel
+- Each app runs in its own microVM with its own dedicated kernel
+- Hardware-enforced boundaries—not namespaces pretending to be secure
 - One compromised app can't touch the others
-- Not namespaces pretending to be secure—real boundaries
+
+### 🛡️ Military-Grade Security Built-In
+- **eBPF Runtime Protection**: Kernel-level monitoring that detects and blocks threats in real-time—not just logs, actually stops attacks
+- **Hardened Kernels**: Every microVM runs a hardened NixOS kernel scoring 90+ on Lynis security audits
+- **SOPIX Compliance**: Security architecture designed for military-grade operational security
+- **Ephemeral Keys**: Encryption keys exist only in RAM during runtime—never persisted to disk
+- **Vulnerability Scanning**: Automatic CVE scanning before every deployment with policy enforcement
+- **Secrets Never Touch Disk**: All sensitive data encrypted with Age (X25519 + Argon2id), decrypted only in memory
 
 ### 🔄 Break Things Fearlessly
 - Atomic deployments: either fully applied or fully reverted
@@ -50,23 +58,33 @@ Most developers pay Vercel/Railway/Render out of inertia, not technical necessit
 - No partial updates leaving you in broken states
 
 ### 🌍 Works Everywhere
-- Runs on your hardware—Hetzner, OVH, your closet server
+- **On your server**: Hetzner, OVH, DigitalOcean, Vultr, bare metal, your closet server
+- **On your laptop**: Full local development with the same security guarantees
 - No vendor lock-in. Your config is portable. Your data is yours
 - Works offline. Your infrastructure doesn't stop because someone else's cloud went down
 
-### 🛡️ Security Without a PhD
-- Secrets encrypted at rest. No plaintext configs
-- Vulnerability scanning before deploy
-- Real-time monitoring of what's actually running
+### 📦 App Catalog
+Pre-configured apps ready to deploy in seconds:
+
+```bash
+catedral app install gitea        # Git hosting
+catedral app install plausible    # Privacy-friendly analytics
+catedral app install vaultwarden  # Password manager
+catedral app install komodo       # Container management
+catedral app install n8n          # Workflow automation
+catedral app list                 # See all available apps
+```
+
+Every app runs in its own isolated microVM with dedicated resources and security policies.
 
 ---
 
 ## Who It's For
 
-- **Indie hackers** paying $60-150/mo for things that run fine on a $4 VPS
-- **LATAM & SEA developers** where $20/mo Vercel Pro is a luxury
-- **DevOps freelancers** managing 5-10 client servers with scripts and prayers
-- **Developers burned** by Netlify's $55 overage charges or AWS weekend surprises
+- **Developers** who want cloud convenience without cloud prices
+- **Startups** that need to stretch every dollar of runway
+- **Agencies** managing multiple client projects on dedicated infrastructure
+- **Security-conscious teams** that need real isolation, not container theater
 - **NixOS enthusiasts** tired of hostile tooling
 
 ---
@@ -82,9 +100,12 @@ That's it. The installer auto-detects your platform and installs the right binar
 ## Quick Start
 
 ```bash
-catedral app install komodo      # Deploy in seconds
-catedral app install plausible   # Add another
-catedral app list                # See what's running
+# On your server
+catedral init                    # Initialize Catedral
+catedral app install plausible   # Deploy an app
+
+# On your laptop (optional)
+catedral --remote myserver app list   # Manage remote servers
 ```
 
 ---
@@ -104,7 +125,7 @@ catedral app list                # See what's running
 ┌─────────────────────────────────────────────────────────────┐
 │  Your laptop (macOS/Linux)                                  │
 │  └─ catedral-darwin-arm64 or catedral-linux-amd64           │
-│     → Run remote commands, development, testing             │
+│     → Local dev, remote management, testing                 │
 └─────────────────────────────────────────────────────────────┘
                            │
                            │ SSH / API
@@ -116,7 +137,22 @@ catedral app list                # See what's running
 └─────────────────────────────────────────────────────────────┘
 ```
 
-**99% of users need:** `catedral-linux-amd64` on the server (Hetzner, OVH, etc.)
+---
+
+## Security Architecture
+
+Catedral isn't just a deployment tool—it's a security platform.
+
+| Layer | Protection |
+|-------|------------|
+| **Runtime** | eBPF-based kernel monitoring blocks threats in real-time |
+| **Isolation** | Each app in its own microVM with dedicated hardened kernel |
+| **Secrets** | Age encryption (X25519), keys only exist in RAM |
+| **Network** | Encrypted overlay mesh between nodes |
+| **Audit** | Complete trail of every action for compliance |
+| **Scanning** | Automated CVE detection before deployment |
+
+**Lynis Score 90+**: Every microVM kernel passes security hardening benchmarks that most production servers fail.
 
 ---
 
@@ -129,16 +165,6 @@ catedral app list                # See what's running
 | **Enterprise** | Source code | Custom |
 
 No credit card required. No surprise bills. No "contact sales" for pricing.
-
----
-
-## The Anti-PaaS
-
-Catedral is the tool we wished existed.
-
-You shouldn't need a PhD in DevOps to deploy a web app securely. You shouldn't pay 150x markup for bandwidth. You shouldn't wake up to a $2000 AWS bill.
-
-**Your server. Your rules. Your cathedral.**
 
 ---
 
