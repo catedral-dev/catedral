@@ -1,6 +1,6 @@
 # Catedral
 
-Self-hosted app deployment on NixOS with isolated microVMs.
+Deploy self-hosted apps in isolated microVMs. One command. NixOS underneath.
 
 ## Installation
 
@@ -10,13 +10,20 @@ chmod +x /usr/local/bin/catedral
 catedral init
 ```
 
-## Features
+## Quick Start
 
-- **One Command Deploy**: `catedral app install <name>`
-- **NixOS Conversion**: Convert Ubuntu/Debian to NixOS
-- **MicroVM Isolation**: Each app in its own Firecracker VM
-- **Security**: Tetragon eBPF + Trivy scanning
-- **Auto-Upgrade**: Self-updating binary
+```bash
+catedral app install komodo    # Deploy Komodo
+catedral app install plausible # Deploy Plausible Analytics
+catedral app list              # See running apps
+```
+
+## Why Catedral?
+
+- **One command**: No YAML, no Docker, no Kubernetes
+- **Real isolation**: Each app runs in its own VM
+- **NixOS**: Atomic updates, instant rollback
+- **Security**: Built-in monitoring and scanning
 
 ## Plans
 
