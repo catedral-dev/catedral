@@ -1,0 +1,93 @@
+CATEDRAL - Third Party Notices
+
+This product includes software developed by third parties.
+
+================================================================================
+Tetragon
+https://github.com/cilium/tetragon
+--------------------------------------------------------------------------------
+Copyright 2020-2024 Isovalent, Inc.
+Licensed under the Apache License, Version 2.0
+
+Tetragon is used for eBPF-based runtime security enforcement.
+
+================================================================================
+NixOS / Nixpkgs
+https://github.com/NixOS/nixpkgs
+--------------------------------------------------------------------------------
+Copyright 2003-2024 NixOS contributors
+Licensed under the MIT License
+
+NixOS is used as the base operating system for MicroVMs.
+
+================================================================================
+nix-mineral
+https://github.com/cynicsketch/nix-mineral
+--------------------------------------------------------------------------------
+Copyright 2023-2024 cynicsketch
+Licensed under the MIT License
+
+nix-mineral is used for system hardening configurations.
+
+================================================================================
+MicroVM.nix
+https://github.com/astro/microvm.nix
+--------------------------------------------------------------------------------
+Copyright 2021-2024 Astro
+Licensed under the MIT License
+
+MicroVM.nix is used for lightweight virtual machine management.
+
+================================================================================
+age
+https://github.com/FiloSottile/age
+--------------------------------------------------------------------------------
+Copyright 2019-2024 The age Authors
+Licensed under the BSD 3-Clause License
+
+age is used for file encryption.
+
+================================================================================
+filippo.io/age (Go library)
+https://github.com/FiloSottile/age
+--------------------------------------------------------------------------------
+Copyright 2019-2024 The age Authors
+Licensed under the BSD 3-Clause License
+
+Used for age encryption in Go code.
+
+================================================================================
+Cobra
+https://github.com/spf13/cobra
+--------------------------------------------------------------------------------
+Copyright 2013-2024 Steve Francia
+Licensed under the Apache License, Version 2.0
+
+Cobra is used for CLI command structure.
+
+================================================================================
+golang.org/x/crypto
+https://golang.org/x/crypto
+--------------------------------------------------------------------------------
+Copyright 2009-2024 The Go Authors
+Licensed under the BSD 3-Clause License
+
+Used for Argon2id password hashing.
+
+================================================================================
+gopkg.in/yaml.v3
+https://github.com/go-yaml/yaml
+--------------------------------------------------------------------------------
+Copyright 2011-2024 Canonical Ltd.
+Licensed under the MIT License
+
+Used for YAML configuration parsing.
+
+================================================================================
+
+THE ABOVE THIRD-PARTY SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY
+KIND, EXPRESS OR IMPLIED. THE COPYRIGHT HOLDERS AND CONTRIBUTORS OF THE
+ABOVE SOFTWARE SHALL NOT BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY.
+
+Catedral itself is licensed under the Elastic License 2.0.
+See LICENSE file for details.
