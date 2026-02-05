@@ -74,10 +74,10 @@ Most developers pay Vercel/Railway/Render out of inertia, not technical necessit
 ## Installation
 
 ```bash
-curl -fsSL https://github.com/catedral-dev/catedral/releases/latest/download/catedral-linux-amd64 -o /usr/local/bin/catedral
-chmod +x /usr/local/bin/catedral
-catedral init
+curl -fsSL https://catedral.dev/install | sh
 ```
+
+That's it. The installer auto-detects your platform and installs the right binary.
 
 ## Quick Start
 
@@ -86,6 +86,37 @@ catedral app install komodo      # Deploy in seconds
 catedral app install plausible   # Add another
 catedral app list                # See what's running
 ```
+
+---
+
+## Supported Platforms
+
+| Binary | OS | Architecture | Where It Runs |
+|--------|----|--------------|--------------|
+| `catedral-linux-amd64` | Linux | Intel/AMD 64-bit | **Servers** — Hetzner, OVH, DigitalOcean, Vultr, AWS EC2, any VPS |
+| `catedral-linux-arm64` | Linux | ARM 64-bit | Raspberry Pi 4/5, AWS Graviton, Oracle Ampere, Hetzner ARM |
+| `catedral-darwin-amd64` | macOS | Intel | MacBooks/iMacs Intel (2015-2020) — for **local development** |
+| `catedral-darwin-arm64` | macOS | Apple Silicon | MacBooks M1/M2/M3/M4 — for **local development** |
+
+**In practice:**
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  Your laptop (macOS/Linux)                                  │
+│  └─ catedral-darwin-arm64 or catedral-linux-amd64           │
+│     → Run remote commands, development, testing             │
+└─────────────────────────────────────────────────────────────┘
+                           │
+                           │ SSH / API
+                           ▼
+┌─────────────────────────────────────────────────────────────┐
+│  Your server (Linux)                                        │
+│  └─ catedral-linux-amd64 (99% of cases)                     │
+│     → Where microVMs and apps actually run                  │
+└─────────────────────────────────────────────────────────────┘
+```
+
+**99% of users need:** `catedral-linux-amd64` on the server (Hetzner, OVH, etc.)
 
 ---
 
