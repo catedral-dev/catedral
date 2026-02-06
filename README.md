@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <strong>Deploy self-hosted apps in isolated microVMs. One command. NixOS underneath.</strong>
+  <strong>Security Foundation for Self-Hosted Apps</strong>
 </p>
 
 <p align="center">
@@ -14,6 +14,25 @@
     <img src="https://img.shields.io/badge/docs-catedral.dev-blue?style=flat-square" alt="Docs">
   </a>
 </p>
+
+---
+
+## v0.2.0 — What's New
+
+| Feature | Description |
+|---------|-------------|
+| 🏰 **Hardened microVMs** | Maximum isolation, each VM is a fortress |
+| 🛡️ **eBPF immune system** | Neutralizes anomalies instantly at kernel level |
+| 🌐 **Local or remote** | Deploy on this machine or any server via SSH |
+| 📦 **Container-friendly** | Run Komodo/Dokploy/Coolify secured inside microVMs |
+| 🔐 **Ephemeral secrets** | Injected at runtime, never touch disk |
+
+**Setup wizard handles everything:** NixOS conversion, Cloudflare Tunnel, secrets.
+
+```bash
+curl -fsSL https://catedral.dev/install | sh
+catedral init  # The wizard guides you through everything
+```
 
 ---
 
@@ -63,6 +82,18 @@ Most developers pay Vercel/Railway/Render out of inertia, not technical necessit
 - No vendor lock-in. Your config is portable. Your data is yours
 - Works offline. Your infrastructure doesn't stop because someone else's cloud went down
 
+### 📦 Container-Friendly
+
+Want to use containers? Catedral has your back. Install container platforms **secured inside microVMs**:
+
+```bash
+catedral app install komodo     # Container management platform
+catedral app install dokploy    # Self-hosted Vercel/Netlify alternative
+catedral app install coolify    # Heroku & Netlify alternative
+```
+
+Catedral provides the security foundation—hardened VMs, eBPF protection, encrypted secrets. The container platform handles orchestration. Best of both worlds.
+
 ### 📦 App Catalog
 Pre-configured apps ready to deploy in seconds:
 
@@ -100,13 +131,23 @@ That's it. The installer auto-detects your platform and installs the right binar
 ## Quick Start
 
 ```bash
-# On your server
-catedral init                    # Initialize Catedral
-catedral app install plausible   # Deploy an app
+# The wizard handles everything
+catedral init
 
-# On your laptop (optional)
-catedral --remote myserver app list   # Manage remote servers
+# Install apps
+catedral app list
+catedral app install ghost
+
+# Manage
+catedral vm list
+catedral app status ghost
 ```
+
+The setup wizard guides you through:
+- Local or remote server setup
+- Automatic NixOS conversion (Ubuntu/Debian)
+- Cloudflare Tunnel configuration
+- Passphrase and secrets setup
 
 ---
 
