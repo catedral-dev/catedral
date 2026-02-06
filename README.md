@@ -226,8 +226,49 @@ Catedral isn't just a deployment tool—it's a security platform.
 | **Network** | Encrypted overlay mesh between nodes |
 | **Audit** | Complete trail of every action for compliance |
 | **Scanning** | Automated CVE detection before deployment |
+| **Access Control** | Passphrase-protected sessions with automatic timeout |
 
 **Lynis Score 90+**: Every microVM kernel passes security hardening benchmarks that most production servers fail.
+
+### Each App = Its Own Fortress
+
+With Coolify, Dokploy, or any container-based platform, all your apps share the same kernel. A CVE in one container can escape and compromise everything else on the machine.
+
+**Catedral is different.** Each app runs in its own microVM with its own dedicated kernel. A vulnerability in one app physically cannot spread to others—they're separate virtual machines, not just namespaces pretending to be isolated.
+
+| Threat | Containers (Coolify/Dokploy) | Catedral |
+|--------|------------------------------|----------|
+| **CVE blast radius** | All apps on the host | Single VM only |
+| **Kernel exploits** | Shared kernel = total compromise | Each VM has its own kernel |
+| **Container escape** | Attacker owns the host | Attacker trapped in microVM |
+| **Resource exhaustion** | One app can starve others | Hardware-enforced limits per VM |
+
+This is the difference between apartment buildings with shared walls and individual fortresses with moats.
+
+### Passphrase-Protected Access
+
+Even SSH access to your server isn't enough to control Catedral. All operations require unlocking with your passphrase first:
+
+```bash
+$ catedral app list
+Error: Catedral is locked. Run 'catedral unlock' first
+
+$ catedral unlock
+Enter passphrase:
+✓ Unlocked for this session (expires in 30 minutes)
+
+$ catedral app list
+NAME         STATUS    UPTIME
+ghost        running   3d 2h
+gitea        running   15d 4h
+plausible    running   7d 1h
+```
+
+**Session-based security:**
+- Sessions expire automatically after 30 minutes of inactivity
+- No persistent tokens stored on disk
+- Even if an attacker gains SSH access, they cannot manage your infrastructure without the passphrase
+- Enterprise-grade access control without the enterprise complexity
 
 ---
 
