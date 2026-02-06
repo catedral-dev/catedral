@@ -3,7 +3,11 @@
 </p>
 
 <p align="center">
-  <strong>Security Foundation for Self-Hosted Apps</strong>
+  <strong>Security Layer for Container Platforms</strong>
+</p>
+
+<p align="center">
+  <em>Catedral is to Coolify what Cloudflare is to Nginx</em>
 </p>
 
 <p align="center">
@@ -33,6 +37,36 @@
 curl -fsSL https://catedral.dev/install | sh
 catedral init  # The wizard guides you through everything
 ```
+
+---
+
+## Already Using Coolify, Dokploy, or Komodo?
+
+**Perfect. Install them INSIDE Catedral.**
+
+Catedral isn't here to replace your container platform—it's here to protect it.
+
+| Without Catedral | With Catedral |
+|------------------|---------------|
+| Coolify runs on Docker over normal Linux | Coolify runs in Docker INSIDE a hardened microVM |
+| A compromised container can escalate | A compromised container dies in the microVM, doesn't touch the host |
+| Secrets stored on disk | Ephemeral secrets in RAM only |
+| Trust that Docker isolates properly | Hardware-level isolation (Firecracker) |
+
+### The Analogy
+
+**Catedral is to Coolify what Cloudflare is to Nginx.**
+
+- Cloudflare doesn't replace your web server—it protects it
+- Catedral doesn't replace your container orchestrator—it hardens it
+
+```bash
+catedral app install coolify   # Coolify now runs in a hardened microVM
+catedral app install dokploy   # Same for Dokploy
+catedral app install komodo    # Or Komodo
+```
+
+**Your workflow stays the same. Your security level goes up.**
 
 ---
 
