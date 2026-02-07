@@ -1,0 +1,33 @@
+Catedral Software License Agreement
+
+Copyright 2024-2026 Catedral
+
+This software is licensed under the Catedral Software License Agreement.
+
+For the complete license terms, please visit:
+https://catedral.dev/license
+
+By using this software, you agree to be bound by the terms of the
+Catedral Software License Agreement available at the URL above.
+
+## Summary (not legally binding)
+
+### What you CAN do
+- Use Catedral for free (personal and commercial)
+- Use in production environments
+- Modify for internal use
+- Share the binary with others
+- Integrate into your infrastructure
+
+### What you CANNOT do
+- Offer Catedral as a managed/hosted service
+- Remove or circumvent license protections
+- Sell Catedral as your own product
+- Sublicense to third parties
+
+## Third-Party Software
+
+This software includes third-party open source components.
+For attributions, run: catedral licenses
+
+For complete terms and conditions, see https://catedral.dev/license
