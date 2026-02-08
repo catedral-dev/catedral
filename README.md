@@ -28,7 +28,7 @@
 | **Complete isolation per app** | Each app runs in total isolation—CVE in one can't touch others |
 | **Runtime protection** | Detects and blocks threats in real-time |
 | **Local or remote** | Deploy on this machine or any server via SSH |
-| **Container-friendly** | Run Komodo/Dokploy/Coolify with enterprise security |
+| **Container-friendly** | Run Komodo/Dokploy/Coolify with production-grade security |
 | **Ephemeral secrets** | Injected at runtime, never touch disk |
 
 **Setup wizard handles everything.** Answer a few questions, we do the rest.
@@ -61,7 +61,7 @@ Catedral isn't here to replace your container platform—it's here to protect it
 - Catedral doesn't replace your deployment platform—it protects it
 
 ```bash
-catedral app install coolify   # Coolify now runs with enterprise security
+catedral app install coolify   # Coolify now runs with production-grade security
 catedral app install dokploy   # Same for Dokploy
 catedral app install komodo    # Or Komodo
 ```
@@ -84,7 +84,6 @@ Most developers pay Vercel/Railway/Render out of inertia, not technical necessit
 
 ### Stop Paying the Cloud Tax
 - One server, one price. No surprise bills, no bandwidth metering, no "contact sales"
-- A $7/mo Hetzner VPS + $20/mo Catedral Pro replaces $150+/mo of PaaS fees
 - Know exactly what you pay. Forever.
 
 ### One Command, Not Twenty
@@ -115,7 +114,7 @@ Most developers pay Vercel/Railway/Render out of inertia, not technical necessit
 
 ### Container-Friendly
 
-Want to use containers? Catedral has your back. Install container platforms with enterprise security:
+Want to use containers? Catedral has your back. Install container platforms with production-grade security:
 
 ```bash
 catedral app install komodo     # Container management platform
@@ -222,20 +221,9 @@ plausible    running   7d 1h
 
 ---
 
-## Pricing
-
-| Plan | Apps | Price |
-|------|------|-------|
-| **Free** | 3 | $0 |
-| **Pro** | Unlimited | $20/mo |
-| **Enterprise** | Custom | Contact us |
-
-No credit card required. No surprise bills. No "contact sales" for pricing.
-
----
-
 <p align="center">
   <a href="https://catedral.dev">Documentation</a> •
+  <a href="https://catedral.dev/pricing">Pricing</a> •
   <a href="https://github.com/catedral-dev/catedral/releases">Releases</a>
 </p>
 
