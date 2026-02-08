@@ -28,7 +28,7 @@
 | **Complete isolation per app** | Each app runs in total isolation—CVE in one can't touch others |
 | **Runtime protection** | Detects and blocks threats in real-time |
 | **Local or remote** | Deploy on this machine or any server via SSH |
-| **Container-friendly** | Run Dokploy/Coolify with enterprise security |
+| **Container-friendly** | Run Komodo/Dokploy/Coolify with enterprise security |
 | **Ephemeral secrets** | Injected at runtime, never touch disk |
 
 **Setup wizard handles everything.** Answer a few questions, we do the rest.
@@ -40,7 +40,7 @@ catedral init  # The wizard guides you through everything
 
 ---
 
-## Already Using Coolify or Dokploy?
+## Already Using Coolify, Dokploy, or Komodo?
 
 **Perfect. Install them INSIDE Catedral.**
 
@@ -63,6 +63,7 @@ Catedral isn't here to replace your container platform—it's here to protect it
 ```bash
 catedral app install coolify   # Coolify now runs with enterprise security
 catedral app install dokploy   # Same for Dokploy
+catedral app install komodo    # Or Komodo
 ```
 
 **Your workflow stays the same. Your security level goes up.**
@@ -117,6 +118,7 @@ Most developers pay Vercel/Railway/Render out of inertia, not technical necessit
 Want to use containers? Catedral has your back. Install container platforms with enterprise security:
 
 ```bash
+catedral app install komodo     # Container management platform
 catedral app install dokploy    # Self-hosted Vercel/Netlify alternative
 catedral app install coolify    # Heroku & Netlify alternative
 ```
