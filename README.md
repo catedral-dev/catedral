@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <em>Catedral is to Coolify what Cloudflare is to Nginx</em>
+  <em>Cloudflare protects your website. Catedral protects your server.</em>
 </p>
 
 <p align="center">
@@ -55,10 +55,10 @@ Catedral isn't here to replace your container platform—it's here to protect it
 
 ### The Analogy
 
-**Catedral is to Coolify what Cloudflare is to Nginx.**
+**Cloudflare protects your website. Catedral protects your server.**
 
-- Cloudflare doesn't replace your web server—it protects it
-- Catedral doesn't replace your container orchestrator—it hardens it
+- Cloudflare doesn't replace your website—it protects it
+- Catedral doesn't replace your deployment platform—it protects it
 
 ```bash
 catedral app install coolify   # Coolify now runs with enterprise security
